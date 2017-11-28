@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'offers',
+    'candidateuser',
+    'enterpriseuser',
 ]
+
+# rajout
+AUTH_USER_MODEL = 'candidateuser.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
