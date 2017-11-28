@@ -16,6 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+#from offers.views import my_first_view
+from offers.views import offer_detail, offer_list, offer_add
+
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^offer_detail/(?P<offer_id>\d)/$', offer_detail, name='offer_detail'),
+    url(r'^offer_add/$', offer_add, name='offer_add'),
+    url(r'^$', offer_list),
 ]
