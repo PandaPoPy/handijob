@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'offers',
     'candidateuser',
-    'enterpriseuser',
+    #'enterpriseuser', souci quand il y a 2 types de User
 ]
 
 # rajout
