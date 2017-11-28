@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
-from offers.models import Offer
+from offers.models import Offer, Enterprise
 from offers.forms import OfferForm
 
 
@@ -33,4 +33,10 @@ def offer_add(request):
         form=OfferForm()
     return render(request, 'offers/offer_form.html', {
         'form':form,
+    })
+
+def enterprise_detail(request, enterprise_id):
+    enterprise = Enterprise.objects.get(id=enterprise_id)
+    return render(request, 'offers/enterprise_detail.html',{
+        'enterprise':enterprise,
     })

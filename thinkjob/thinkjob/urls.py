@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 #from offers.views import my_first_view
-from offers.views import offer_detail, offer_list, offer_add
+from offers.views import offer_detail, offer_list, offer_add, enterprise_detail
 
 
 urlpatterns = [
@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^offer_detail/(?P<offer_id>\d)/$', offer_detail, name='offer_detail'),
     url(r'^offer_add/$', offer_add, name='offer_add'),
     url(r'^$', offer_list),
+
+    url(r'^enterprise_detail/(?P<enterprise_id>\d)/$', enterprise_detail, name='enterprise_detail'),
 ]
