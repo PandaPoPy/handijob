@@ -13,3 +13,9 @@ class EnterpriseAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Enterprise, EnterpriseAdmin)
+
+
+# class ApplianceAdmin(admin.ModelAdmin):
+#     pass
+#
+# admin.site.register(Appliance, ApplianceAdmin)

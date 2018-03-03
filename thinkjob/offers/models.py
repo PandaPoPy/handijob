@@ -1,7 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 
-from candidateuser.models import User
+#from usermanagement.models import User
 
 
 class Enterprise(models.Model):
@@ -30,12 +30,15 @@ class Offer(models.Model):
     def __str__(self):
         return self.title
 
-#
+
 # class Appliance(models.Model):
-#     candidate_user = models.ForeignKey(User)
+#     #candidate_user = models.ForeignKey(User)
 #     offer= models.ForeignKey('Offer')
 #
-#     class Meta:
-#         unique_together=(  # cela va permettre une contrainte d'unicité pour empêcher d'avoir 2 même candidatures pour un même Candidat
-#             ('candidate_user', 'offer'),
-#         )
+#     #class Meta:
+#         # unique_together=(  # cela va permettre une contrainte d'unicité pour empêcher d'avoir 2 même candidatures pour un même Candidat
+#         #     ('candidate_user', 'offer'),
+#         # )
+#
+#     def __str__(self):
+#         return self.offer.title
